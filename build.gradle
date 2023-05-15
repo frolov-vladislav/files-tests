@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def selenideVersion = "6.13.1",
+    junitVersion = "5.7.1"
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "com.codeborne:pdf-test:1.8.1",
+            "com.codeborne:xls-test:1.4.3",
+            "com.opencsv:opencsv:5.7.1",
+            "org.assertj:assertj-core:3.19.0",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.11.5'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}
