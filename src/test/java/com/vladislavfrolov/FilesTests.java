@@ -1,3 +1,5 @@
+package com.vladislavfrolov;
+
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import net.lingala.zip4j.io.inputstream.ZipInputStream;
