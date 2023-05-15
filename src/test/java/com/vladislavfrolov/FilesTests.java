@@ -63,7 +63,6 @@ public class FilesTests {
 
             for (XWPFParagraph xwpfParagraph : paragr) {
                 assertThat(xwpfParagraph.getText()).isEqualTo("Тест");
-
             }
         }
     }
