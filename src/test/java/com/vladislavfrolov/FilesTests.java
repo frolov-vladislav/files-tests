@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FilesTests {
 
     @Test
-    public void txtFileTest() throws Exception {
+    public void txtFormatFileTest() throws Exception {
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream("text-file.txt")) {
             assert stream != null;
             String result = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
@@ -26,7 +26,7 @@ public class FilesTests {
     }
 
     @Test
-    public void pdfFileTest() throws Exception {
+    public void pdfFormatFileTest() throws Exception {
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream("pdf.pdf")) {
             assert stream != null;
             PDF pdf = new PDF(stream);
@@ -35,7 +35,7 @@ public class FilesTests {
     }
 
     @Test
-    public void xlsFileTest() throws Exception {
+    public void xlsFormatFileTest() throws Exception {
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream("xls-file.xls")) {
             assert stream != null;
             XLS xls = new XLS(stream);
